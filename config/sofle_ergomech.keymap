@@ -27,7 +27,6 @@
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
-
     };
 
     keymap {
