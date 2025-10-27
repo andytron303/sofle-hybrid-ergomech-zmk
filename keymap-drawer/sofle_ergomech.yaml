@@ -1,7 +1,8 @@
 layout: {zmk_keyboard: sofle_ergomech}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BACKSPACE, ESC, Q, W, E, R, T, Y, U, I, O, P, \, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LEFT
-      SHIFT, Z, X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, SPACE, RETURN, raise, RCTRL, RALT, RIGHT GUI, ENTER, RIGHT, UP ARROW, LEFT, DOWN]
+  default: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BACKSPACE, TAB, Q, W, E, R, T, Y, U, I, O, P, \, CAPSLOCK, A, S, D, F, G, H, J, K, L, ;, '''',
+    LEFT SHIFT, Z, X, C, V, B, N, M, ',', ., /, RSHFT, MUTE, LGUI, LALT, LCTRL, lower, SPACE, RETURN, raise, RCTRL, RALT, RIGHT GUI, ENTER, RIGHT, UP ARROW, LEFT,
+    DOWN]
   lower:
   - '&studio_unlock'
   - F1
@@ -27,7 +28,7 @@ layers:
   - '9'
   - '0'
   - F12
-  - Sft+Alt+DELETE
+  - Alt+Ctl+DELETE
   - '!'
   - '@'
   - '#'
