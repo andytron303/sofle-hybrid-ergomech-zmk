@@ -4,6 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
+&nice_view_spi {
+     cs-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
+ };
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
