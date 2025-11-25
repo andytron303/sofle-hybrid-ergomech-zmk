@@ -26,6 +26,14 @@
         };
     };
 
+    behaviors {
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -45,7 +53,7 @@
              &studio_unlock  &kp LGUI &kp LALT &kp LCTRL &mo LOWER  &kp RET    &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -65,7 +73,7 @@
             &trans        &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -84,7 +92,7 @@
                 &trans        &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
