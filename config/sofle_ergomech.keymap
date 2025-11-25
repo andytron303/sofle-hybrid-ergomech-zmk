@@ -27,6 +27,14 @@
         };
     };
 
+     behaviors {
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,7 +57,7 @@
                                                                &kp ENTER  &kp RIGHT  &kp UP_ARROW  &kp LEFT  &kp DOWN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -72,7 +80,7 @@
                                                                 &kp A      &kp B     &kp C      &kp D      &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -94,7 +102,7 @@
                                                                                   &kp A      &kp B     &kp C     &kp D      &kp E
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
         };
 
         adjust_layer {
